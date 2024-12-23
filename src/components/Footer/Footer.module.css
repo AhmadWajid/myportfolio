@@ -1,0 +1,21 @@
+.footer-container {
+    padding-bottom: 3rem;
+    padding-top: 3rem;
+    text-align: center;
+    letter-spacing: -.01rem;
+    word-spacing: -.05rem;
+    font-weight: bold;
+}
+.footer-container > * {
+    margin: .5rem;
+}
+
+.footer-title {
+    color: var(--secondary-color);
+    font-size: var(--font-size-verylarge);
+    margin: 2rem 0rem 0rem;
+}
+.footer-copyright {
+    margin: .5rem;
+    color: var(--alternate-color);
+}

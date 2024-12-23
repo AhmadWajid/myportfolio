@@ -1,0 +1,28 @@
+.title {
+    position: relative; /* Allows positioning of pseudo-elements */
+    font-weight: bold;
+    font-size: var(--font-size-verylarge);
+    color: var(--alternate-color);   
+    margin: 2rem; 
+}
+
+.title::before {
+    content: ''; /* Empty content for the circle */
+    position: absolute;
+    bottom: -1rem; /* Position the circle below the text */
+    left: -1; /* Align the circle to the left edge */
+    width: 1rem; /* Circle size */
+    height: 1rem; /* Circle size */
+    background-color: var(--alternate-color); /* Circle color (adjust as needed) */
+    border-radius: 50%; /* Makes it a circle */
+}
+
+.title::after {
+    content: ''; /* Empty content for the line */
+    position: absolute;
+    bottom: -.6rem; /* Position the line below the text */
+    left: 0.3rem; /* Start the line slightly to the right of the circle */
+    width: 100%; /* Line spans the entire width */
+    height: 2px; /* Line thickness */
+    background-color: var(--alternate-color); /* Line color (same as circle) */
+}

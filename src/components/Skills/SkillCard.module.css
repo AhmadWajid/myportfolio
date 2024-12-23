@@ -1,0 +1,31 @@
+.card-container {
+    display: flex;
+    background-color: var(--secondary-color);
+    border-radius: .2rem;
+    padding: .2rem .6rem;
+    font-weight: bold;
+    font-size: var(--font-size-medium);
+    align-items: center;
+    box-shadow: 0rem 0.3rem 0.01em 0em black;
+    filter: contrast(1);
+    transition: filter .2s linear;
+    transition: box-shadow .2s linear;
+    margin: .4rem;
+}
+
+.card-container > img {
+    height: 50px;
+    max-width: 50px;
+}
+.card-container:hover img {
+    filter: contrast(.4);
+    transition: filter .3s linear;
+
+}
+.card-container:hover {
+    box-shadow: 0rem 0.1em 0.6em 0rem black;
+    transition: box-shadow .2s linear;
+}
+.card-container > p {
+    padding: 0px 0px 0px .3rem;
+}

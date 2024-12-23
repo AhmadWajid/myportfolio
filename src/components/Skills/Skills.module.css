@@ -1,0 +1,10 @@
+
+.skills-cardcontainer {
+    color: var(---primary-color);
+    display: flex;
+    padding: 2rem;
+    place-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+}

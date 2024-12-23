@@ -1,0 +1,49 @@
+.contactSection {
+    text-align: center;
+    padding: 2rem;
+    background-color: #f8f9fd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 2rem auto;
+    max-width: 600px;
+  }
+  
+  .heading {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #ff4c4c;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+  }
+  
+  .contactInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  
+  .infoItem {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.2rem;
+    color: #555;
+  }
+  
+  .icon {
+    font-size: 1.5rem;
+    color: #ff4c4c;
+  }
+  
+  .link {
+    text-decoration: none;
+    color: #555;
+    transition: color 0.3s ease;
+  }
+  
+  .link:hover {
+    color: #ff4c4c;
+  }
+  

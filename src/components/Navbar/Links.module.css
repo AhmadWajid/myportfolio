@@ -1,0 +1,36 @@
+/* Links.module.css */
+.links-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+    background-color: white;
+  }
+  
+.navLink {
+    text-decoration: none;
+    font-weight: bold;
+}
+.link-element {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: var(--primary-color);
+    font-size: var(--font-size-medium);
+    background: linear-gradient(to right, black 50%, var(--alternate-color) 50%);
+    background-size: 200% 100%;
+    background-position: 0 0;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: background-position 0.3s linear;
+}
+
+.link-element:hover {
+    background-position: -100% 0;
+}
+  
+.mobile-links {
+    flex-direction: column;
+    padding: 1rem;
+}

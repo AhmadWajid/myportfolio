@@ -1,38 +1,37 @@
-.App {
-  text-align: center;
+:root {
+  --primary-color: black;
+  --alternate-color: #8b1515;
+  --background-color: linear-gradient(45deg, #23a6d5, #7092b6, #41ccff);
+  --secondary-color: white;
+  --source-color: #23a6d5;
+  --font-size-verylarge: 2rem;
+  --font-size-large: 1.7rem;
+  --font-size-medium: 1.3rem;
+  --font-size-small: .8rem;
+}
+body {
+  font-family: 'Comic Neue', sans-serif;
+  background: var(--background-color);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  letter-spacing: 1.5px;
+  background-size: 300% 300%;
+  animation: colorShift 3s infinite ease-in-out;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+@keyframes colorShift {
+0% {
+  background-position: 0% 50%;
+}
+50% {
+  background-position: 100% 50%;
+}
+100% {
+  background-position: 0% 50%;
+}
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.colored {
+  color: var(--alternate-color);
 }

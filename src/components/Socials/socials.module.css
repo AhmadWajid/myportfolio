@@ -1,0 +1,58 @@
+.socialsSection {
+    text-align: center;
+    padding: 2rem;
+    background-color: #f8f9fd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 2rem auto;
+    max-width: 600px;
+  }
+  
+  .heading {
+    font-size: 2rem;
+    color: var(--alternate-color);   
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #ff4c4c;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+  }
+  
+  .socialsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .socialBox {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background-color: #ffffff;
+    padding: 1rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .socialBox:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .icon {
+    font-size: 1.8rem;
+    color: var(--alternate-color);
+  }
+  
+  .link {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .link:hover {
+    color: #ff4c4c;
+  }
+  

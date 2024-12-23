@@ -1,0 +1,20 @@
+.navbar-container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100px;
+    padding: 0 30px;
+    background: white;
+}
+.navbar-hamburger {
+    font-size: var(--font-size-large);
+}
+@media (min-width: 48.75rem) {
+    .navbar-hamburger {
+       display: none;
+    }
+}
+.nav-button-holder {
+    display: flex;
+}

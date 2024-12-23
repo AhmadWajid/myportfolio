@@ -1,0 +1,32 @@
+/* Hero Section Wrapper */
+.hero {
+    display: flex;
+    align-items: center; /* Vertically center content */
+    justify-content: center; /* Horizontally center content */
+    color: white; /* Black text for contrast */
+    padding: 20px;
+    text-align: center;
+  }
+
+  
+  /* Title Styling */
+  .title {
+    font-size: 3rem; /* Large font size for the title */
+    font-weight: bold;
+    margin: 0 0 10px; /* Spacing below the title */
+  }
+  
+  /* Subtitle Styling */
+  .subtitle {
+    font-size: 1.5rem;
+    margin: 0 0 20px;
+  }
+  
+  /* Button Group Wrapper */
+  .buttonGroup {
+    display: flex;
+    gap: 15px; /* Space between buttons */
+    justify-content: center; /* Center buttons horizontally */
+    flex-wrap: wrap;
+  }
+  

@@ -1,0 +1,60 @@
+.button-outer {
+    display: flex; /* Places buttons side by side */
+    gap: 1rem; /* Adds space between buttons */
+    position: relative; /* Ensures the buttons' pseudo-elements align properly */
+    margin: .3rem;    ;
+}
+
+.button {
+    position: relative; /* Needed for the pseudo-element */
+    padding: .5rem 1rem;
+    border-radius: .2rem;
+    cursor: pointer;
+    transition: transform 0.2s ease; /* Smooth transform on hover */
+    display: inline-flex; /* Keeps text aligned */
+    justify-content: center; /* Centers text horizontally */
+    align-items: center; /* Centers text vertically */
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    z-index: 2; /* Keep the button above the pseudo-element */
+}
+
+.button-outer::before {
+    content: '';
+    position: absolute;
+    top: .3rem;
+    left: .3rem;
+    width: 100%;
+    height: 100%;
+    background-color: black; /* The background behind the button */
+    border-radius: .2rem; /* Matches the button's border radius */
+    z-index: 1; /* Behind the button */
+    transition: transform 0.2s ease;
+}
+.button-source {
+    background-color: var(--source-color);
+    color: white;
+}
+.button-blue {
+    background-color: var(--source-color);
+    color: var(--secondary-color);
+}
+
+.button-white {
+    background-color: var(--secondary-color);
+    color: black;
+}
+.button-darkblue {
+    background-color: #7092b6;
+    color: white;
+}
+
+
+.button:hover {
+    transform: translate(-5px, -5px); /* Moves the button diagonally */
+}
+
+.button:hover::before {
+    transform: translate(5px, 5px); /* Moves the black background in the opposite direction */
+}

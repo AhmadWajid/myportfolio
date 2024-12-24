@@ -4,7 +4,7 @@ import style from './Button.module.css';
 const Button = ({ text, href, type }) => {
   const handleClick = (e) => {
     if (href.startsWith('#')) {
-      // Prevent default anchor behavior for internal links
+      // Prevent default anchor behavior
       e.preventDefault();
 
       // Scroll to the section with the given id
@@ -13,22 +13,19 @@ const Button = ({ text, href, type }) => {
         section.scrollIntoView({ behavior: 'smooth' });
       }
     } else {
-      // Open external link in a new tab for external links
+      // Open external link in a new tab
       window.open(href, '_blank', 'noopener,noreferrer');
     }
   };
 
   return (
     <div className={style['button-outer']}>
-      {/* Use anchor tag for href */}
-      <a
+      <div
         className={`${style.button} ${style[type]}`}
-        href={href} // for accessibility and basic link behavior
-        onClick={handleClick} // your custom click handler
-        role="button"
+        onClick={handleClick}
       >
         {text}
-      </a>
+      </div>
     </div>
   );
 };

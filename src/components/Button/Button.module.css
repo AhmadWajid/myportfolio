@@ -19,6 +19,9 @@
     color: white;
     z-index: 2; /* Keep the button above the pseudo-element */
 }
+.button-outer > a {
+    text-decoration: none;
+}
 
 .button-outer::before {
     content: '';

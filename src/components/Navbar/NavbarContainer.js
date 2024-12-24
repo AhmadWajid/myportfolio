@@ -48,7 +48,7 @@ function NavbarContainer() {
           <i className="fa fa-bars" aria-hidden="true"></i>
         </div>
       )}
-  {isLargeScreen ?                 <div className={styles['nav-button-holder']}><Button text="Contact" href="#contact" type={"button-darkblue"}/><Button text="Resume" href="https://ahmadwajid.com/files/resume.pdf" type={"button-blue"}/></div>
+  {isLargeScreen ?                 <div className={styles['nav-button-holder']}><Button text="Contact" href="#contact" type={"button-darkblue"}/><Button text="Resume" href="/files/Resume.pdf" type={"button-blue"}/></div>
 : ''}
     </div>
           {/* Mobile Menu */}

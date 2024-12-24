@@ -21,7 +21,7 @@ const HeroSection = ({name, subtitle, }) => {
         </p>
         <div className={styles.buttonGroup}>
           <Button href="#about" text="About Me 👇" type="button-white" />
-          <Button href="https://ahmadwajid.com/files/resume.pdf" text="Resume" type="button-white"/>
+          <Button href="/files/Resume.pdf" text="Resume" type="button-white"/>
         </div>
       </div>
     </div>

@@ -3,12 +3,22 @@
     align-items: center;
     text-align: center;
 }
+
 .logo-image {
     width: 50px;
-    border-radius: 50px;
-    border: solid var(--alternate-color);
-    margin: .5rem;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid var(--alternate-color, #333);
+    margin: 0.5rem;
+    object-fit: cover;
+    transition: border-color 0.3s ease, transform 0.3s ease;
 }
+
+.logo-image:hover {
+    border-color: var(--primary-color, --alternate-color);
+    transform: rotate(15deg);
+}
+
 .logo-name {
     font-size: var(--font-size-large);
     font-weight: bolder;

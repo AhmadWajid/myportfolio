@@ -2,6 +2,7 @@ import React from 'react'
 import Title from '../Title/Title'
 import style from './ProjectContainer.module.css'
 import Project from './Project'
+import technologies from '../myicons/technologies'
 const ProjectContainer = () => {
   return (
     <div>
@@ -9,16 +10,16 @@ const ProjectContainer = () => {
       <div className={style['projects-container']}>
       <Project 
   title="Sheet Storage" 
-  images={["https://github.com/AhmadWajid/SheetStorage/raw/main/images/SheetStorage.png","https://github.com/AhmadWajid/SheetStorage/raw/main/images/Config.png","https://github.com/AhmadWajid/SheetStorage/raw/main/images/open-apps-script.png","https://github.com/AhmadWajid/SheetStorage/raw/main/images/folder-id.png"]} 
+  images={["/imgs/projects/sheetstorage/1.png","/imgs/projects/sheetstorage/2.png","/imgs/projects/sheetstorage/3.png","/imgs/projects/sheetstorage/4.png"]} 
 
   bulletPoints={[
     "Leverage Google Sheets and Google Drive as a free storage system with easy integration.",
     "Saves data dynamically and supports file uploads with error handling."
   ]}
   technology={[
-    "https://skillforge.com/wp-content/uploads/2020/10/javascript.png",
-    "https://cdn.worldvectorlogo.com/logos/html-1.svg",
-    "https://www.gstatic.com/images/branding/product/2x/hh_apps_script_512dp.png",
+    technologies.javascript,
+    technologies.html,
+    technologies.appscript,
   ]}
   source='https://github.com/AhmadWajid/SheetStorage'
 />
@@ -31,9 +32,9 @@ const ProjectContainer = () => {
     "Simplifies content management by using a hero.csv file for news updates and a JSON file for job listings.",
   ]}
   technology={[
-    "https://skillforge.com/wp-content/uploads/2020/10/javascript.png",
-    "https://cdn.worldvectorlogo.com/logos/html-1.svg",
-    "https://seeklogo.com/images/C/css-3-logo-023C1A7171-seeklogo.com.png"
+    technologies.javascript,
+    technologies.html,
+    technologies.css,
   ]}
   source='https://github.com/AhmadWajid/NonProfitWebsite'
 />
@@ -46,8 +47,8 @@ const ProjectContainer = () => {
     "Assigns and removes roles based on subscription status."
   ]}
   technology={[
-    "https://cdn.iconscout.com/icon/free/png-256/free-python-logo-icon-download-in-svg-png-gif-file-formats--brand-development-tools-pack-logos-icons-226051.png?f=webp&w=256",
-    "https://cdn.prod.website-files.com/6257adef93867e50d84d30e2/636e0a6a49cf127bf92de1e2_icon_clyde_blurple_RGB.png",
+    technologies.python,
+    technologies.discord,
   ]}
   source='https://github.com/AhmadWajid/Geniuz-Manager'
 />
@@ -61,8 +62,8 @@ const ProjectContainer = () => {
     "Integrates seamlessly with Discord for additional functionality."
   ]}
   technology={[
-    "https://cdn.iconscout.com/icon/free/png-256/free-python-logo-icon-download-in-svg-png-gif-file-formats--brand-development-tools-pack-logos-icons-226051.png?f=webp&w=256",
-    "https://cdn.prod.website-files.com/6257adef93867e50d84d30e2/636e0a6a49cf127bf92de1e2_icon_clyde_blurple_RGB.png"
+    technologies.python,
+    technologies.discord,
   ]}
   source='https://github.com/AhmadWajid/Ebay-Bot'
 />

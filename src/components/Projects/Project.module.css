@@ -134,8 +134,8 @@
   }
   
   .fullscreen-image {
-    width: 90%;
-    height: 80vh;
+    width: 80%;
+    max-height: 80vh;
     margin: auto;
   }
   

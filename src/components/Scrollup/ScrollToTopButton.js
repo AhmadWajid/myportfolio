@@ -6,13 +6,12 @@ const ScrollToTopButton = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollThreshold = 200; // Adjust based on your layout
+      const scrollThreshold = 200; 
       setIsVisible(window.scrollY > scrollThreshold);
     };
 
     window.addEventListener('scroll', handleScroll);
 
-    // Cleanup on component unmount
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };

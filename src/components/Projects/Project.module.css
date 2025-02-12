@@ -213,3 +213,15 @@
   background: #eee;
   transform: scale(1.1);
 }
+@media (max-width: 480px) {
+  .tech {
+    place-content: center;
+  }
+  .tech-images {
+    display: none;
+  }
+  .button-source {
+    place-content: center;
+    margin: 10px;
+  }
+}

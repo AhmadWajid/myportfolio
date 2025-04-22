@@ -31,7 +31,8 @@
   font-size: var(--font-size-medium);
   letter-spacing: -.01rem;
   word-spacing: -.05rem;
-  margin: 0.5rem;
+  margin: .5rem;
+  margin-left: 1rem;
   transition: color 0.3s ease, transform 0.3s ease;
   text-transform: capitalize;
 }
@@ -39,7 +40,7 @@
 .project-bullet {
   padding: 0;
   font-size: var(--font-size-small);
-  line-height: 1.6;
+  /* line-height: 1.6; */
   color: var(--secondary-text-color);
   list-style-type: circle;
 }
@@ -100,10 +101,11 @@
 }
 
 .thumbnail-view {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
 .main-image {
@@ -115,38 +117,68 @@
   border-top-right-radius: .6rem;
 }
 
+.main-image:hover {
+  transform: scale(1.02);
+}
 
 .arrow-button {
   position: absolute;
-  top: 50%;
-  background: rgba(0, 0, 0, 0.5);
-  color: white;
-  font-size: 1.5em;
-  padding: 10px;
-  border: none;
-  cursor: pointer;
-  transform: translateY(-50%);
   z-index: 2;
-  border-radius: 5px;
-  transition: background 0.3s ease;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
 }
 
 .arrow-button:hover {
-  background: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
-.arrow-hidden {
-  display: none;
-}
-
-.arrow-button:first-child {
+.arrow-left {
   left: 10px;
 }
 
-.arrow-button:last-child {
+.arrow-right {
   right: 10px;
 }
 
+.arrow-hidden {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+/* Image indicators */
+.image-indicators {
+  position: absolute;
+  bottom: 10px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 8px;
+}
+
+.indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.active-indicator {
+  background-color: white;
+  transform: scale(1.2);
+}
+
+/* Modal improvements */
 .modal {
   position: fixed;
   top: 0;
@@ -155,20 +187,66 @@
   height: 100%;
   background: rgba(0, 0, 0, 0.8);
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(3px);
+  transition: opacity 0.3s ease;
   z-index: 1000;
 }
 
 .modal-content {
   position: relative;
   text-align: center;
+  max-width: 90%;
+  max-height: 90vh;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .fullscreen-image {
   width: 80%;
-  max-height: 80vh;
+  max-height: 85vh;
   margin: auto;
+  object-fit: contain;
+}
+
+/* Modal arrow positioning fixes */
+.modal-controls {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  pointer-events: none; /* So clicks pass through to the image */
+}
+
+.modal-arrow {
+  pointer-events: auto; /* Make buttons clickable */
+  margin: 0;
+  z-index: 10;
+}
+
+.modal-arrow-left {
+  position: absolute;
+  left: 15px;
+}
+
+.modal-arrow-right {
+  position: absolute;
+  right: 15px;
+}
+
+/* Fix button sizes for better touch targets */
+.arrow-button {
+  min-width: 36px;
+  min-height: 36px;
+  font-size: 18px;
+  line-height: 1;
+  padding: 0;
 }
 
 .modal-controls {
@@ -196,23 +274,58 @@
   background: rgba(0, 0, 0, 0.8);
 }
 
+.modal-arrow {
+  margin: 0 15px;
+  width: 44px;
+  height: 44px;
+  font-size: 1.5rem;
+}
+
+.image-counter {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 0.9rem;
+}
+
 .close-button {
   position: absolute;
-  top: -3rem;
-  right: 2rem;
-  background: #fff;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
   border: none;
-  padding: 10px;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
-  border-radius: 5px;
-  font-size: 14px;
-  transition: background 0.3s ease, transform 0.3s ease;
+  transition: background-color 0.2s ease;
 }
 
 .close-button:hover {
-  background: #eee;
-  transform: scale(1.1);
+  background-color: rgba(0, 0, 0, 0.7);
 }
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
 @media (max-width: 480px) {
   .tech {
     place-content: center;

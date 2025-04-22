@@ -33,7 +33,8 @@ const Project = ({ title, images, bulletPoints, technology, source }) => {
           {images.length > 1 && (
             <button
               onClick={previousImage}
-              className={`${style['arrow-button']} ${currentImageIndex === 0 ? style['arrow-hidden'] : ''}`}
+              className={`${style['arrow-button']} ${style['arrow-left']} ${currentImageIndex === 0 ? style['arrow-hidden'] : ''}`}
+              aria-label="Previous image"
             >
               ❮
             </button>
@@ -47,10 +48,24 @@ const Project = ({ title, images, bulletPoints, technology, source }) => {
           {images.length > 1 && (
             <button
               onClick={nextImage}
-              className={`${style['arrow-button']} ${currentImageIndex === images.length - 1 ? style['arrow-hidden'] : ''}`}
+              className={`${style['arrow-button']} ${style['arrow-right']} ${currentImageIndex === images.length - 1 ? style['arrow-hidden'] : ''}`}
+              aria-label="Next image"
             >
               ❯
             </button>
+          )}
+          
+          {/* Image indicators */}
+          {images.length > 1 && (
+            <div className={style['image-indicators']}>
+              {images.map((_, index) => (
+                <span 
+                  key={index} 
+                  className={`${style['indicator']} ${index === currentImageIndex ? style['active-indicator'] : ''}`}
+                  onClick={() => setCurrentImageIndex(index)}
+                ></span>
+              ))}
+            </div>
           )}
         </div>
       </div>
@@ -67,18 +82,26 @@ const Project = ({ title, images, bulletPoints, technology, source }) => {
             <div className={style['modal-controls']}>
               <button
                 onClick={previousImage}
-                className={`${style['arrow-button']} ${currentImageIndex === 0 ? style['arrow-hidden'] : ''}`}
+                className={`${style['arrow-button']} ${style['modal-arrow']} ${style['modal-arrow-left']} ${currentImageIndex === 0 ? style['arrow-hidden'] : ''}`}
+                aria-label="Previous image"
               >
                 ❮
               </button>
               <button
                 onClick={nextImage}
-                className={`${style['arrow-button']} ${currentImageIndex === images.length - 1 ? style['arrow-hidden'] : ''}`}
+                className={`${style['arrow-button']} ${style['modal-arrow']} ${style['modal-arrow-right']} ${currentImageIndex === images.length - 1 ? style['arrow-hidden'] : ''}`}
+                aria-label="Next image"
               >
                 ❯
               </button>
             </div>
-            <button onClick={closeModal} className={style['close-button']}>Close</button>
+            <div className={style['image-counter']}>
+              {currentImageIndex + 1} / {images.length}
+            </div>
+            <button onClick={closeModal} className={style['close-button']}>
+              <span aria-hidden="true">×</span>
+              <span className={style['sr-only']}>Close</span>
+            </button>
           </div>
         </div>
       )}

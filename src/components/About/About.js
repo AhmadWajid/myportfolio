@@ -3,6 +3,7 @@ import style from "./About.module.css";
 import Title from "../Title/Title";
 import { MdEmail } from "react-icons/md";
 import { FaPhoneAlt } from "react-icons/fa";
+import PhoneReveal from "../PhoneReveal/PhoneReveal";
 
 const About = () => {
   return (
@@ -33,7 +34,7 @@ const About = () => {
                 <i className={style["icon"]}>  
                   <FaPhoneAlt />
                 </i>
-                <span>714-240-1753</span>
+                <PhoneReveal phoneNumber="714-240-1753" displayText="714-240-1753" />
               </div>
             </div>
           </div>

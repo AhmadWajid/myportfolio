@@ -68,9 +68,42 @@
     backdrop-filter: blur(8px);
     border-radius: 0;
     box-shadow: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 12px 12px;
 }
+
 .mobile-links:hover {
     background-position: none;
     transform: translateY(0);
-    box-shadow: none;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Mobile responsive improvements */
+@media (max-width: 768px) {
+    .links-container {
+        gap: 0.5rem;
+    }
+    
+    .navLink {
+        font-size: var(--font-size-medium);
+        padding: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .links-container {
+        gap: 0.25rem;
+        padding: 0.5rem;
+    }
+    
+    .navLink {
+        font-size: var(--font-size-small);
+        padding: 0.25rem;
+    }
 }

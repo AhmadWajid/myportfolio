@@ -1,36 +1,44 @@
 .contactSection {
-    text-align: center;
-    padding: 2rem;
-    background-color: #f8f9fd;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin: 2rem auto;
-    max-width: 600px;
-  }
+  text-align: center;
+  padding: 2.5rem;
+  background-color: #f8f9fd;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  margin: 2rem auto;
+  max-width: 600px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  overflow: visible;
+  width: 100%;
+  box-sizing: border-box;
+}
   
-  .heading {
-    font-size: 2rem;
-    color: #333;
-    margin-bottom: 1rem;
-    border-bottom: 2px solid #ff4c4c;
-    display: inline-block;
-    padding-bottom: 0.5rem;
-  }
+.heading {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
   
-  .contactInfo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-  }
-  
-  .infoItem {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    font-size: 1.2rem;
-    color: #555;
-  }
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.infoItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.2rem;
+  color: #555;
+  padding: 0.75rem 0;
+  transition: all 0.3s ease;
+}
+
+.infoItem:hover {
+  transform: translateY(-2px);
+}
   
   .icon {
     font-size: 1.5rem;

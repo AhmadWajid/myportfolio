@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './contactSocials.module.css';
 import { FaEnvelope, FaPhoneAlt, FaGithub, FaLinkedin, FaDiscord } from 'react-icons/fa';
+import PhoneReveal from '../PhoneReveal/PhoneReveal';
 
 const ContactSocials = () => {
   return (
@@ -22,9 +23,7 @@ const ContactSocials = () => {
             </div>
             <div className={styles.item}>
               <FaPhoneAlt className={styles.icon} />
-              <a href="tel:7142401753" className={styles.link}>
-                (714) 240-1753
-              </a>
+              <PhoneReveal phoneNumber="714-240-1753" displayText="(714) 240-1753" />
             </div>
           </div>
         </div>

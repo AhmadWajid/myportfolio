@@ -10,6 +10,9 @@ const technologies = {
     appscript: "/imgs/logos/appscript.png",
     laptop: "/imgs/logos/laptop.png",
     discord: "/imgs/logos/discord.png",
+    gemini: "/imgs/logos/gemini.png",
+    firebase: "/imgs/logos/firebase.png",
+    postgres: "/imgs/logos/postgres.png",
     
   };
   

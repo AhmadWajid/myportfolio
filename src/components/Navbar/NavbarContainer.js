@@ -9,7 +9,7 @@ function NavbarContainer() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
-    const mediaQuery = window.matchMedia("(min-width: 48.75rem)");
+    const mediaQuery = window.matchMedia("(min-width: 1024px)");
 
     const handleResize = () => {
       setIsLargeScreen(mediaQuery.matches);

@@ -23,3 +23,26 @@
     font-size: var(--font-size-large);
     font-weight: bolder;
 }
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+    .logo-image {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .logo-name {
+        font-size: var(--font-size-medium);
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-image {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .logo-name {
+        font-size: var(--font-size-small);
+    }
+}

@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './contact.module.css';
 import { FaEnvelope, FaPhoneAlt } from 'react-icons/fa'; // For icons
+import PhoneReveal from '../PhoneReveal/PhoneReveal';
 
 const Contact = () => {
   return (
@@ -15,9 +16,7 @@ const Contact = () => {
         </div>
         <div className={styles.infoItem}>
           <FaPhoneAlt className={styles.icon} />
-          <a href="tel:7142401753" className={styles.link}>
-            (714) 240-1753
-          </a>
+          <PhoneReveal phoneNumber="714-240-1753" displayText="(714) 240-1753" />
         </div>
       </div>
     </section>

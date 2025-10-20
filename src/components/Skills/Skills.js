@@ -15,6 +15,9 @@ const Skills = () => {
       <SkillCard img={technologies.html} text='HTML'/>
       <SkillCard img={technologies.css} text='CSS'/>
       <SkillCard img={technologies.react} text='React'/>
+      <SkillCard img={technologies.gemini} text='Gemini AI'/>
+      <SkillCard img={technologies.postgres} text='PostgreSQL'/>
+      <SkillCard img={technologies.firebase} text='Firebase'/>
       <SkillCard img={technologies.appscript} text='Google App Scripts'/>
       <SkillCard img={technologies.msoffice} text='MS Office'/>
       <SkillCard img={technologies.pythonflask} text='Python Flask'/>

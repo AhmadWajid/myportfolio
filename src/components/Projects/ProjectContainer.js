@@ -9,6 +9,39 @@ const ProjectContainer = () => {
       <Title title="Projects" />
       <div className={style['projects-container']}>
       <Project 
+  title="Synapse - AI Student Grouping" 
+  images={["/imgs/projects/synapse/1.png","/imgs/projects/synapse/2.png","/imgs/projects/synapse/3.png"]} 
+
+  bulletPoints={[
+    "Engineered ML algorithm combining cosine similarity analysis on Gemini-generated embeddings with academic complementarity scoring.",
+    "Built intelligent grouping system processing 100+ student records with 95% accuracy using custom vector similarity calculations.",
+    "Implemented PostgreSQL database with Supabase for relational data management and optimized queries.",
+    "Deployed serverless functions for AI processing, reducing computation costs by 60% compared to traditional architecture."
+  ]}
+  technology={[
+    technologies.postgres,
+    technologies.javascript,
+    technologies.react,
+  ]}
+  source='https://github.com/AhmadWajid/Synapse'
+/>
+      <Project 
+  title="GeniuzEdu - AI Learning Platform" 
+  images={["/imgs/projects/geniuzedu/1.png","/imgs/projects/geniuzedu/2.png","/imgs/projects/geniuzedu/3.png"]} 
+
+  bulletPoints={[
+    "Architected full-stack AI learning platform processing PDFs, YouTube videos, and text with 95%+ text extraction accuracy using hybrid OCR (Tesseract.js + PDF.js) and Gemini 2.0 Flash API.",
+    "Built drag-and-drop document combiner with multi-format support, table-of-contents generation, and KaTeX/LaTeX integration for real-time math rendering.",
+    "Developed a tiered subscription system with Stripe, using Firebase Storage for files and Firestore for text data, supporting file limits (20–40MB) and scalable content processing for 45+ lecture recordings monthly."
+  ]}
+  technology={[
+    technologies.gemini,
+    technologies.react,
+    technologies.firebase,
+  ]}
+  source='https://github.com/AhmadWajid/GeniuzEdu'
+/>
+      <Project 
   title="Sheet Storage" 
   images={["/imgs/projects/sheetstorage/1.png","/imgs/projects/sheetstorage/2.png","/imgs/projects/sheetstorage/3.png","/imgs/projects/sheetstorage/4.png"]} 
 

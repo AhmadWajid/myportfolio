@@ -3,6 +3,7 @@ import styles from './HeroSection.module.css';
 import Button from '../Button/Button';
 import { Typewriter } from 'react-simple-typewriter';
 import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope } from 'react-icons/fa';
+import technologies from '../myicons/technologies';
 
 const HeroSection = ({name, subtitle}) => {
   const [isMounted, setIsMounted] = useState(false);
@@ -16,19 +17,47 @@ const HeroSection = ({name, subtitle}) => {
     <div id="home" className={styles.hero}>
       {/* Animated background */}
       <div className={styles.particlesContainer}>
-        {[...Array(20)].map((_, index) => (
-          <div 
-            key={index}
-            className={styles.particle}
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 5}s`,
-              width: `${Math.random() * 20 + 5}px`,
-              height: `${Math.random() * 20 + 5}px`,
-            }}
-          />
-        ))}
+        {[...Array(15)].map((_, index) => {
+          const techIcons = [
+            technologies.javascript,
+            technologies.python,
+            technologies.react,
+            technologies.html,
+            technologies.css,
+            technologies.gemini,
+            technologies.postgres,
+            technologies.firebase,
+            technologies.appscript,
+            technologies.pythonflask
+          ];
+          const randomTech = techIcons[Math.floor(Math.random() * techIcons.length)];
+          const size = Math.random() * 15 + 10;
+          
+          return (
+            <div 
+              key={index}
+              className={styles.techParticle}
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+                animationDelay: `${Math.random() * 8}s`,
+                width: `${size}px`,
+                height: `${size}px`,
+              }}
+            >
+              <img 
+                src={randomTech} 
+                alt="Tech icon" 
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'contain',
+                  opacity: 0.1
+                }}
+              />
+            </div>
+          );
+        })}
       </div>
       
       <div className={`${styles.content} ${isMounted ? styles.animate : ''}`}>
@@ -65,10 +94,6 @@ const HeroSection = ({name, subtitle}) => {
         </div>
       </div>
       
-      {/* Scroll indicator */}
-      <div className={styles.scrollIndicator}>
-        <div className={styles.scrollDown}></div>
-      </div>
     </div>
   );
 };

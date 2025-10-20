@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import style from './Project.module.css';
 
 const Project = ({ title, images, bulletPoints, technology, source }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isScrollable, setIsScrollable] = useState(false);
+  const bulletRef = useRef(null);
 
   const openModal = (index) => {
     setCurrentImageIndex(index);
@@ -24,53 +26,96 @@ const Project = ({ title, images, bulletPoints, technology, source }) => {
     );
   };
 
+  useEffect(() => {
+    if (bulletRef.current) {
+      const isOverflowing = bulletRef.current.scrollHeight > bulletRef.current.clientHeight;
+      setIsScrollable(isOverflowing);
+    }
+  }, [bulletPoints]);
+
   return (
-    <div id="projects" className={style['project-container']}>
-      {/* Image and Modal */}
-      <div className={style['project-imgs']}>
-        {/* Small version with arrows */}
-        <div className={style['thumbnail-view']}>
-          {images.length > 1 && (
-            <button
-              onClick={previousImage}
-              className={`${style['arrow-button']} ${style['arrow-left']} ${currentImageIndex === 0 ? style['arrow-hidden'] : ''}`}
-              aria-label="Previous image"
+    <>
+      <div id="projects" className={style['project-container']}>
+        {/* Image */}
+        <div className={style['project-imgs']}>
+          {/* Small version with arrows */}
+          <div className={style['thumbnail-view']}>
+            {images.length > 1 && (
+              <button
+                onClick={previousImage}
+                className={`${style['arrow-button']} ${style['arrow-left']} ${currentImageIndex === 0 ? style['arrow-hidden'] : ''}`}
+                aria-label="Previous image"
+              >
+                ❮
+              </button>
+            )}
+            <img
+              alt={title}
+              src={images[currentImageIndex]}
+              onClick={() => openModal(currentImageIndex)}
+              className={style['main-image']}
+            />
+            {images.length > 1 && (
+              <button
+                onClick={nextImage}
+                className={`${style['arrow-button']} ${style['arrow-right']} ${currentImageIndex === images.length - 1 ? style['arrow-hidden'] : ''}`}
+                aria-label="Next image"
+              >
+                ❯
+              </button>
+            )}
+            
+            {/* Image indicators */}
+            {images.length > 1 && (
+              <div className={style['image-indicators']}>
+                {images.map((_, index) => (
+                  <span 
+                    key={index} 
+                    className={`${style['indicator']} ${index === currentImageIndex ? style['active-indicator'] : ''}`}
+                    onClick={() => setCurrentImageIndex(index)}
+                  ></span>
+                ))}
+              </div>
+            )}
+          </div>
+        </div>
+
+        {/* Project Data */}
+        <div className={style['project-data']}>
+          <div className={style['project-info']}>
+            <p className={style['project-title']}>{title}</p>
+            <div 
+              ref={bulletRef}
+              className={`${style['project-bullet']} ${isScrollable ? style['scrollable'] : ''}`}
             >
-              ❮
-            </button>
-          )}
-          <img
-            alt={title}
-            src={images[currentImageIndex]}
-            onClick={() => openModal(currentImageIndex)}
-            className={style['main-image']}
-          />
-          {images.length > 1 && (
-            <button
-              onClick={nextImage}
-              className={`${style['arrow-button']} ${style['arrow-right']} ${currentImageIndex === images.length - 1 ? style['arrow-hidden'] : ''}`}
-              aria-label="Next image"
-            >
-              ❯
-            </button>
-          )}
-          
-          {/* Image indicators */}
-          {images.length > 1 && (
-            <div className={style['image-indicators']}>
-              {images.map((_, index) => (
-                <span 
-                  key={index} 
-                  className={`${style['indicator']} ${index === currentImageIndex ? style['active-indicator'] : ''}`}
-                  onClick={() => setCurrentImageIndex(index)}
-                ></span>
+              <ul>
+                {bulletPoints.map((point, index) => (
+                  <li key={index}>{point}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+          <div className={style['tech']}>
+            <div className={style['tech-images']}>
+              {technology.map((picture, index) => (
+                <img key={index} src={picture} alt={`Technology ${index + 1}`} />
               ))}
             </div>
-          )}
+            <div className={style['button-source']}>
+              <a
+                href={source}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={style['button-link']}
+              >
+                Source
+              </a>
+            </div>
+          </div>
         </div>
       </div>
 
-      {/* Modal */}
+      {/* Modal - Outside the project container */}
       {isModalOpen && (
         <div className={style['modal']} onClick={closeModal}>
           <div className={style['modal-content']} onClick={(e) => e.stopPropagation()}>
@@ -105,38 +150,7 @@ const Project = ({ title, images, bulletPoints, technology, source }) => {
           </div>
         </div>
       )}
-
-      {/* Project Data */}
-      <div className={style['project-data']}>
-        <div className={style['project-info']}>
-          <p className={style['project-title']}>{title}</p>
-          <div className={style['project-bullet']}>
-            <ul>
-              {bulletPoints.map((point, index) => (
-                <li key={index}>{point}</li>
-              ))}
-            </ul>
-          </div>
-        </div>
-        <div className={style['tech']}>
-          <div className={style['tech-images']}>
-            {technology.map((picture, index) => (
-              <img key={index} src={picture} alt={`Technology ${index + 1}`} />
-            ))}
-          </div>
-          <div className={style['button-source']}>
-            <a
-              href={source}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={style['button-link']}
-            >
-              Source
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
+    </>
   );
 };
 

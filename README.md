@@ -1,71 +1,169 @@
-# Getting Started with Create React App
+# Ahmad Wajid - Portfolio Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, responsive portfolio website built with React showcasing my skills, projects, and experience as a Computer Science student at UCLA.
 
-## Available Scripts
+## 🚀 Live Demo
 
-In the project directory, you can run:
+[View Live Portfolio](ahmadwajid.com)
 
-### `yarn start`
+## 📋 Table of Contents
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Project Structure](#project-structure)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Projects Showcased](#projects-showcased)
+- [Contact](#contact)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## ✨ Features
 
-### `yarn test`
+- **Responsive Design**: Optimized for all device sizes
+- **Modern UI/UX**: Clean, professional design with smooth animations
+- **Interactive Elements**: Typewriter effect, floating animations, and smooth scrolling
+- **Project Showcase**: Detailed project descriptions with images
+- **Skills Section**: Visual representation of technical skills
+- **Contact Integration**: Direct links to social media and contact information
+- **Resume Download**: Easy access to downloadable resume
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🛠 Technologies Used
 
-### `yarn build`
+- **Frontend**: React 19.0.0
+- **Styling**: CSS Modules
+- **Icons**: React Icons
+- **Animations**: React Simple Typewriter
+- **Build Tool**: Create React App
+- **Package Manager**: Yarn
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 📁 Project Structure
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+src/
+├── components/
+│   ├── About/           # About section component
+│   ├── Button/          # Reusable button component
+│   ├── Contact/         # Contact form component
+│   ├── ContactSocials/  # Social media links
+│   ├── Footer/          # Footer component
+│   ├── Hero/            # Hero section with animations
+│   ├── Navbar/          # Navigation bar
+│   ├── Projects/        # Project showcase
+│   ├── Scrollup/        # Scroll to top functionality
+│   ├── Section/         # Reusable section wrapper
+│   ├── Skills/          # Skills display
+│   └── Title/           # Section title component
+├── App.js              # Main application component
+└── index.js            # Application entry point
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🚀 Installation
 
-### `yarn eject`
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/AhmadWajid/myportfolio-1.git
+   cd myportfolio-1
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. **Install dependencies**
+   ```bash
+   yarn install
+   # or
+   npm install
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. **Start the development server**
+   ```bash
+   yarn start
+   # or
+   npm start
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+4. **Open your browser**
+   Navigate to [http://localhost:3000](http://localhost:3000)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 📖 Usage
 
-## Learn More
+### Available Scripts
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- `yarn start` - Runs the app in development mode
+- `yarn build` - Builds the app for production
+- `yarn test` - Launches the test runner
+- `yarn eject` - Ejects from Create React App (one-way operation)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Customization
 
-### Code Splitting
+1. **Personal Information**: Update personal details in the respective component files
+2. **Projects**: Add your projects in the `Projects` component
+3. **Skills**: Modify the skills section to reflect your expertise
+4. **Styling**: Customize colors and styles in the CSS module files
+5. **Images**: Replace placeholder images in the `public/imgs/` directory
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 🎯 Projects Showcased
 
-### Analyzing the Bundle Size
+The portfolio includes several featured projects:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### AI/ML Projects
+- **Synapse – Intelligent Student Grouping via AI Matching Algorithm** (March 2025)
+  - Engineered ML algorithm combining cosine similarity analysis on Gemini-generated embeddings with academic complementarity scoring
+  - Built intelligent grouping system processing 100+ student records with 95% accuracy using custom vector similarity calculations
+  - Implemented PostgreSQL database with Supabase for relational data management and optimized queries
+  - Deployed serverless functions for AI processing, reducing computation costs by 60% compared to traditional architecture
 
-### Making a Progressive Web App
+- **GeniuzEdu – Personalized Study Platform with AI-Generated Learning Tools** (January 2025)
+  - Architected full-stack AI learning platform processing PDFs, YouTube videos, and text with 95%+ text extraction accuracy using hybrid OCR (Tesseract.js + PDF.js) and Gemini 2.0 Flash API for AI-generated notes, flashcards, quizzes, and explanations
+  - Built drag-and-drop document combiner with multi-format support, table-of-contents generation, and KaTeX/LaTeX integration for real-time math rendering
+  - Developed a tiered subscription system with Stripe, using Firebase Storage for files and Firestore for text data, supporting file limits (20–40MB) and scalable content processing for 45+ lecture recordings monthly
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Web Development Projects
+- **Munch and Merge**: [Add description when available]
+- **eBay Project**: E-commerce platform development
+- **GeniuzManager**: Management system application
+- **Non-Profit Website**: Community-focused web solution
+- **SheetStorage**: Data management application
 
-### Advanced Configuration
+Each project includes:
+- Project description
+- Technologies used
+- Screenshots
+- Live demo links (where applicable)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 👨‍💻 About the Developer
 
-### Deployment
+**Ahmad Wajid** is a first-year Computer Science student at UCLA with over three years of programming and web development experience. Specializing in Python, JavaScript, and HTML/CSS, Ahmad has gained practical skills through internships in web development and front-end design.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Key Achievements:
+- 🏆 Second-place winner in the U.S. House of Representatives Congressional App Challenge
+- 💼 Internship experience in web development and front-end design
+- 🌐 Freelance work in web development
+- 🗣️ Fluent in English, Pashto, and Persian
 
-### `yarn build` fails to minify
+## 📞 Contact
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# myportfolio
+- **Email**: ahmadwajid@ucla.edu
+- **GitHub**: [@AhmadWajid](https://github.com/AhmadWajid)
+- **LinkedIn**: [ahmad-wajid](https://linkedin.com/in/ahmad-wajid)
+- **Portfolio**: [ahmadwajid.com](https://ahmadwajid.com)
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## 🤝 Contributing
+
+While this is a personal portfolio, suggestions and improvements are welcome! Feel free to:
+
+1. Fork the project
+2. Create a feature branch
+3. Commit your changes
+4. Push to the branch
+5. Open a Pull Request
+
+## 🙏 Acknowledgments
+
+- React community for excellent documentation
+- Create React App for the development setup
+- All the open-source libraries used in this project
+
+---
+
+⭐ **Star this repository if you found it helpful!**

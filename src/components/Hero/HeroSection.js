@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import styles from './HeroSection.module.css';
 import Button from '../Button/Button';
 import { Typewriter } from 'react-simple-typewriter';
-import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 import technologies from '../myicons/technologies';
 
 const HeroSection = ({name, subtitle}) => {

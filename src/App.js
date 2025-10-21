@@ -25,7 +25,7 @@ const App = () => {
       src: technologies.appscript,
       alt: 'Appscript Logo',
       size: '4rem',
-    },    
+    },
     {
       src: technologies.javascript,
       alt: 'Javascript Logo',
@@ -41,12 +41,11 @@ const App = () => {
       alt: 'React Logo',
       size: '4rem',
     },
-    ,
     {
       src: technologies.html,
       alt: 'HTML Logo',
       size: '4rem',
-    },    
+    },
     {
       src: technologies.javascript,
       alt: 'Javascript Logo',
